@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/C_WHITE"
+    android:orientation="vertical"
+    tools:context=".PlayGameActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/loutSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/loutPlayGameMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_50dp">
+
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        style="@style/actionBarBackImgStyle"
+                        android:src="@drawable/ic_back" />
+
+                    <ImageView
+                        android:layout_width="@dimen/DP_40dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:adjustViewBounds="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1dp"
+                    android:layout_marginLeft="@dimen/DP_15dp"
+                    android:layout_marginRight="@dimen/DP_15dp"
+                    android:background="@color/viewDividerColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/DP_10dp"
+                    android:layout_marginBottom="@dimen/DP_10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgPlayGame"
+                        android:layout_width="@dimen/DP_90dp"
+                        android:layout_height="@dimen/DP_90dp"
+                        android:layout_marginLeft="@dimen/DP_20dp"
+                        android:layout_marginTop="@dimen/DP_5dp"
+                        android:layout_marginRight="@dimen/DP_20dp"
+                        android:layout_marginBottom="@dimen/DP_10dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/DP_20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtGameName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/DP_8dp"
+                            android:gravity="start"
+                            android:text=""
+                            android:textColor="@color/C_222222"
+                            android:textSize="@dimen/DP_16dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/DP_20dp"
+                            android:layout_marginTop="@dimen/DP_4dp">
+
+                            <TextView
+                                android:id="@+id/txtPublisherName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start"
+                                android:background="@drawable/bg_publisher_txt"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/DP_10dp"
+                                android:paddingRight="@dimen/DP_10dp"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/C_8A8A8A"
+                                android:textSize="@dimen/DP_9dp" />
+
+                            <TextView
+                                android:id="@+id/txtCategoryName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="@dimen/DP_8dp"
+                                android:background="@drawable/bg_publisher_txt"
+                                android:ellipsize="marquee"
+                                android:gravity="start|center_vertical"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:paddingLeft="@dimen/DP_10dp"
+                                android:paddingRight="@dimen/DP_10dp"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/C_8A8A8A"
+                                android:textSize="@dimen/DP_9dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <com.rjn.thegamescompany.Custom.PVCustomHorizontalBar
+                        android:id="@+id/pvCustomHorizontalBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/DP_20dp"
+                        android:thumb="@anim/pvhorizontalbar_anim"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/pbRoundCorner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_20dp"
+                    android:layout_margin="@dimen/DP_15dp"
+                    android:background="@drawable/bg_round_black_corner"
+                    android:visibility="gone"
+                    app:rcBackgroundColor="@color/C_CECECE"
+                    app:rcBackgroundPadding="@dimen/DP_4dp"
+                    app:rcMax="100"
+                    app:rcProgress="0"
+                    app:rcProgressColor="@color/C_222222"
+                    app:rcRadius="@dimen/DP_15dp"
+                    app:rcReverse="false"
+                    app:rcSecondaryProgress="0"
+                    app:rcSecondaryProgressColor="@color/C_CECECE" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_100dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/loutFavourite"
+                        style="@style/playGameActionLoutStyle">
+
+                        <ImageView
+                            android:id="@+id/imgFav"
+                            style="@style/playGameActionImgStyle"
+                            android:layout_marginBottom="@dimen/DP_7dp"
+                            android:src="@drawable/ic_unselected_fav_black" />
+
+                        <!--  <com.like.LikeButton
+                              android:id="@+id/btnLike"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              app:anim_scale_factor="2"
+                              app:circle_end_color="@color/C_Red"
+                              app:circle_start_color="@color/C_8A8A8A"
+                              app:dots_primary_color="@color/C_Red"
+                              app:dots_secondary_color="@color/C_8A8A8A"
+                              app:icon_size="@dimen/DP_25dp"
+                              app:icon_type="heart"
+                              app:like_drawable="@drawable/ic_selected_fav"
+                              app:unlike_drawable="@drawable/ic_unselected_fav_black" />-->
+
+                        <TextView
+                            style="@style/playGameActionTxtStyle"
+                            android:text="Favourite" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/loutPlay"
+                        style="@style/playGameActionLoutStyle"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            style="@style/playGameActionImgStyle"
+                            android:layout_width="@dimen/DP_55dp"
+                            android:layout_height="@dimen/DP_55dp"
+                            android:src="@drawable/ic_detail_play" />
+
+                        <TextView
+                            style="@style/playGameActionTxtStyle"
+                            android:layout_height="@dimen/DP_22dp"
+                            android:text="Play" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/loutShare"
+                        style="@style/playGameActionLoutStyle"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            style="@style/playGameActionImgStyle"
+                            android:layout_marginBottom="@dimen/DP_7dp"
+                            android:src="@drawable/ic_detail_share"
+                            android:tint="@color/C_BLACK" />
+
+                        <TextView
+                            style="@style/playGameActionTxtStyle"
+                            android:text="Share" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1dp"
+                    android:layout_marginLeft="@dimen/DP_15dp"
+                    android:layout_marginRight="@dimen/DP_15dp"
+                    android:background="@color/viewDividerColor" />
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/DP_15dp"
+                    android:layout_marginBottom="@dimen/DP_20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="@dimen/DP_20dp"
+                    android:paddingRight="@dimen/DP_20dp"
+                    android:text=""
+                    android:textColor="@color/C_8A8A8A"
+                    android:textSize="@dimen/DP_12dp" />
+
+                <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    ads:adSize="LARGE_BANNER"
+                    ads:adUnitId="ca-app-pub-7202906887840059/2265168782"/>
+
+                <!-- ads:adUnitId="ca-app-pub-3940256099942544/6300978111" -->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

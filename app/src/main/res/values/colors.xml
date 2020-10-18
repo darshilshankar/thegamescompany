@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/C_WHITE</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">@color/C_222222</color>
+
+    <color name="C_WHITE">#ffffff</color>
+    <color name="C_222222">#222222</color>
+    <color name="C_CECECE">#cecece</color>
+    <color name="C_DEDEDE">#dedede</color>
+    <color name="C_F5F5F5">#f5f5f5</color>
+    <color name="C_BLACK">#000000</color>
+    <color name="C_8A8A8A">#8a8a8a</color>
+    <color name="C_Red">#ff0000</color>
+    <color name="C_F70E63">#F70E63</color>
+    <!--<color name="C_FDD012">#FDD012</color>-->
+    <color name="C_FDD012">#FDC530</color>
+    <color name="C_6ECAD9">#6ECAD9</color>
+
+    <color name="viewDividerColor">@color/C_F5F5F5</color>
+    <color name="custom_progress_blue_header">#ff33b5e5</color>
+    <color name="custom_progress_blue_progress">#ff0099cc</color>
+    <color name="custom_progress_blue_progress_half">#7f0099cc</color>
+    <color name="custom_progress_background">#ff3c3a3b</color>
+</resources>

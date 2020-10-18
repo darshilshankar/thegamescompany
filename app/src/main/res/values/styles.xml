@@ -1,0 +1,173 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/C_WHITE</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:statusBarColor" tools:ignore="NewApi">@color/C_WHITE</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">@color/C_222222</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+
+    </style>
+
+    <style name="navigationRawLoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/DP_40dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/DP_20dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="navigationRawImgStyle">
+        <item name="android:layout_width">@dimen/DP_20dp</item>
+        <item name="android:layout_height">@dimen/DP_20dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="navigationRawTxtStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/C_222222</item>
+        <item name="android:textSize">@dimen/DP_10dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/DP_15dp</item>
+    </style>
+
+    <style name="navigationRawDetailImgStyle">
+        <item name="android:layout_width">@dimen/DP_10dp</item>
+        <item name="android:layout_height">@dimen/DP_10dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginRight">@dimen/DP_20dp</item>
+        <item name="android:tint">@color/C_CECECE</item>
+        <item name="android:rotation">180</item>
+    </style>
+
+    <style name="navigationRawRoundLoutStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0.50</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:layout_marginTop">@dimen/DP_5dp</item>
+        <item name="android:layout_marginBottom">@dimen/DP_5dp</item>
+    </style>
+
+    <style name="navigationRawRoundImgStyle">
+        <item name="android:layout_width">@dimen/DP_40dp</item>
+        <item name="android:layout_height">@dimen/DP_40dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:padding">@dimen/DP_11dp</item>
+        <item name="android:background">@drawable/bg_round_light_gray_corner</item>
+    </style>
+
+    <style name="navigationRawRoundTxtStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/DP_20dp</item>
+        <item name="android:textColor">@color/C_222222</item>
+        <item name="android:textSize">@dimen/DP_9dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="dialogFooterBtnStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">0.50</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/DP_14dp</item>
+        <item name="android:textColor">@color/C_BLACK</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="dialogTxtTitleStyle">
+        <item name="android:layout_width">@dimen/DP_80dp</item>
+        <item name="android:layout_height">@dimen/DP_30dp</item>
+        <item name="android:textColor">@color/C_222222</item>
+        <item name="android:textSize">@dimen/DP_12dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/DP_15dp</item>
+    </style>
+
+    <style name="dialogTxtValStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/C_222222</item>
+        <item name="android:textSize">@dimen/DP_12dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="headerTxtStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/DP_45dp</item>
+        <item name="android:textColor">@color/C_222222</item>
+        <item name="android:textSize">@dimen/DP_30dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingLeft">@dimen/DP_13dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="actionBarBackImgStyle">
+        <item name="android:layout_width">@dimen/DP_35dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:padding">@dimen/DP_10dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="playGameActionLoutStyle">
+        <item name="android:layout_width">@dimen/DP_70dp</item>
+        <item name="android:layout_height">@dimen/DP_80dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+    </style>
+
+    <style name="playGameActionImgStyle">
+        <item name="android:layout_width">@dimen/DP_35dp</item>
+        <item name="android:layout_height">@dimen/DP_35dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerInside</item>\
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:padding">@dimen/DP_5dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="playGameActionTxtStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/DP_22dp</item>
+        <item name="android:textColor">@color/C_222222</item>
+        <item name="android:textSize">@dimen/DP_8dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="colorProgressBar">
+        <item name="android:colorControlNormal" tools:ignore="NewApi">#ED2A78</item>
+        <item name="android:colorControlActivated" tools:ignore="NewApi">#ED2A78</item>
+    </style>
+
+
+</resources>

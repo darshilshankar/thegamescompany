@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/DP_15dp"
+        android:background="@drawable/bg_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DP_45dp"
+            android:gravity="center"
+            android:text="It's a Flash Game !"
+            android:textColor="@color/C_BLACK"
+            android:textSize="@dimen/DP_18dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DP_1dp"
+            android:layout_marginLeft="@dimen/DP_15dp"
+            android:layout_marginRight="@dimen/DP_15dp"
+            android:background="@color/C_CECECE" />
+
+        <ImageView
+            android:layout_width="@dimen/DP_70dp"
+            android:layout_height="@dimen/DP_70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/DP_15dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_puffin"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dialogTxtTitleStyle"
+                android:text="Step 1 :" />
+
+            <TextView
+                style="@style/dialogTxtValStyle"
+                android:text="Download Puffin Browser." />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dialogTxtTitleStyle"
+                android:text="Step 2 :" />
+
+            <TextView
+                style="@style/dialogTxtValStyle"
+                android:text="Choose Desktop site." />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dialogTxtTitleStyle"
+                android:text="Step 3 :" />
+
+            <TextView
+                style="@style/dialogTxtValStyle"
+                android:text="Now play this game." />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DP_1dp"
+            android:layout_marginLeft="@dimen/DP_15dp"
+            android:layout_marginTop="@dimen/DP_10dp"
+            android:layout_marginRight="@dimen/DP_15dp"
+            android:background="@color/C_CECECE" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DP_45dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnBack"
+                style="@style/dialogFooterBtnStyle"
+                android:text="Back" />
+
+            <View
+                android:layout_width="@dimen/DP_1dp"
+                android:layout_height="@dimen/DP_25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/C_CECECE" />
+
+            <Button
+                android:id="@+id/btnPlay"
+                style="@style/dialogFooterBtnStyle"
+                android:text="Play" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

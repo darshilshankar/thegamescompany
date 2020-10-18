@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/C_WHITE"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CategoryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            style="@style/actionBarBackImgStyle"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="@dimen/DP_40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/DP_6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_header_search" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtCategory"
+        style="@style/headerTxtStyle"
+        android:layout_marginTop="@dimen/DM_10dp"
+        android:text="Games" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DP_1dp"
+        android:layout_marginLeft="@dimen/DP_15dp"
+        android:layout_marginRight="@dimen/DP_15dp"
+        android:background="@color/viewDividerColor" />
+
+    <RelativeLayout
+        android:id="@+id/loutSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DP_35dp"
+        android:layout_margin="@dimen/DP_10dp"
+        android:background="@drawable/bg_edt_search"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgLoutSearch"
+            android:layout_width="@dimen/DP_35dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/DP_5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_header_search"
+            android:tint="@color/C_8A8A8A" />
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/imgLoutSearch"
+            android:background="@android:color/transparent"
+            android:hint="Search Games"
+            android:inputType="textNoSuggestions"
+            android:paddingLeft="@dimen/DP_5dp"
+            android:paddingRight="@dimen/DP_10dp"
+            android:singleLine="true"
+            android:textColor="@color/C_222222"
+            android:textSize="@dimen/DP_12dp" />
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/loutSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listCategory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/DP_8dp"
+            android:paddingRight="@dimen/DP_8dp"
+            android:visibility="visible" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/txtDataNotAvailable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/Msg_Fav_Not"
+        android:textSize="@dimen/DP_15dp"
+        android:visibility="gone" />
+
+</LinearLayout>

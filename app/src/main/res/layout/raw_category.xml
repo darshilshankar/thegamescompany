@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/C_WHITE">
+
+    <LinearLayout
+        android:id="@+id/loutCategoryRaw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DP_8dp"
+        android:layout_marginBottom="@dimen/DP_8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="@dimen/DP_70dp"
+            android:layout_height="@dimen/DP_70dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/bg_category_ideal"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/txtGameName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DP_25dp"
+            android:layout_marginTop="@dimen/DP_8dp"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/DP_7dp"
+            android:paddingRight="@dimen/DP_7dp"
+            android:textColor="@color/C_BLACK"
+            android:textSize="@dimen/DP_9dp" />
+    </LinearLayout>
+
+</RelativeLayout>

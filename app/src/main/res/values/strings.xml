@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">The Games Company</string>
+    <string name="title_activity_category_activty">Category List</string>
+    <string name="title_activity_navigation">Dashboard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="dashboard_Categories">Categories</string>
+    <string name="dashboard_Publisher">Publishers</string>
+    <string name="dashboard_Trending">Trending</string>
+    <string name="dashboard_New_Added">Newly Added</string>
+    <string name="dashboard_Recent">Recently Played</string>
+    <string name="Continue">Continue</string>
+    <string name="Explore">Explore</string>
+
+    <string name="Welcome">Welcome</string>
+    <string name="Challenge">Challenge</string>
+    <string name="Caution">Caution !</string>
+
+    <string name="Des_1">Sit Back! You are soon going to enter in the world of awesome games. By getting started, you already took the biggest step in exploring this beautiful world.</string>
+    <string name="Des_2">Imagine the hugeness of this world. Play new games every day, still you can’t experience all the games throughout your life. Yes that’s our thrilling Challenge!</string>
+    <string name="Des_3">Stay Alert! There’s more than 10,000 exciting games inside this world. You may not find the way of getting outside of this beautiful journey.</string>
+
+    <string name="Msg_Fav_Not">You don\'t have any favourites yet.</string>
+
+    <string name="Msg_Error_Server">Server time out. Swipe down to refresh.</string>
+    <string name="Msg_Na_Game">Sorry, this game has been removed or changed. Please play another games.</string>
+
+    <string name="text">"The Games Company is a largest collection of Online HTML5 and Flash Games. Our team have manually collected games from different publishers. This app re-directs players to the online game publishers. Hence, we are assuring that we don't have any copyrighted contents and the app is not affiliate or sponsored by any companies.\n" +
+                "\n\n\n\n" +
+                "<b>Publish your games:</b>\n" +
+                "\n" +
+                "To publish your games and create large traffics to your games and monetize, simply mail us at:\n" +
+                "manufacturingbiss@gmail.com\n" +
+                "\n" +
+                "<b>Our Team:</b>\n" +
+                "\n" +
+                "Hello! We are the team of experts providing you the best concepts of mobile apps with modern designs. Our expert team is best in making everyday utility mobile apps with smarter performance. We are happy that we always had good responses from our users which inspire us to build more and more useful apps.\n" +
+                "\n" +
+                "Write us @ manufacturingbiss@gmail.com\n" +
+                "\n" +
+                "Always happy to assist.\n" +
+                "\n" +
+                "Thank You."</string>
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "936406507849",
+    "firebase_url": "https://the-games-company.firebaseio.com",
+    "project_id": "the-games-company",
+    "storage_bucket": "the-games-company.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936406507849:android:1d43c1556089b2c7",
+        "android_client_info": {
+          "package_name": "com.rjn.thegamescompany"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936406507849-ujt5as9c2p93jhqi5f007uok4eeeuleb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYCe5ke5t2QeKUrQyq-Ry0WiqEJHkMrvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936406507849-ujt5as9c2p93jhqi5f007uok4eeeuleb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

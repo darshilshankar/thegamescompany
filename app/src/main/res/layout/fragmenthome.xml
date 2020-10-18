@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/C_WHITE"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtCategory"
+        style="@style/headerTxtStyle"
+        android:layout_marginTop="@dimen/DM_10dp"
+        android:text="Games" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DP_1dp"
+        android:layout_marginLeft="@dimen/DP_15dp"
+        android:layout_marginRight="@dimen/DP_15dp"
+        android:background="@color/viewDividerColor" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/loutSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <com.rjn.thegamescompany.Custom.PVRecyclerScrollview
+            android:id="@+id/scrollMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <in.arjsna.swipecardlib.SwipeCardView
+                    android:id="@+id/swipeCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_130dp"
+                    android:visibility="gone"
+                    app:bottom_swipe_detect="false"
+                    app:left_swipe_detect="true"
+                    app:rotation_degrees="15.5" />
+
+                <com.tmall.ultraviewpager.UltraViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_150dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/DP_10dp"
+                    android:layout_marginBottom="@dimen/DP_10dp"
+                    android:background="@color/C_WHITE" />
+
+                <!--<com.rjn.thegamescompany.Custom.KKViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_150dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/DP_10dp"
+                    android:visibility="visible"
+                    android:layout_marginBottom="@dimen/DP_10dp"
+                    android:background="@color/C_WHITE" />-->
+
+                <!--<com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
+                    android:id="@+id/infinitePager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_140dp"
+                    android:visibility="visibility"
+                    app:icvp_center_page_scale_offset="5dp"
+                    app:icvp_interpolator="@android:anim/accelerate_decelerate_interpolator"
+                    app:icvp_max_page_scale="0.8"
+
+                    app:icvp_medium_scaled="false"
+                    app:icvp_min_page_scale="0.30"
+                    app:icvp_min_page_scale_offset="@dimen/DP_25dp"
+                    app:icvp_scroll_duration="3000" />-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1dp"
+                    android:layout_marginLeft="@dimen/DP_15dp"
+                    android:layout_marginRight="@dimen/DP_15dp"
+                    android:background="@color/viewDividerColor" />
+
+                <LinearLayout
+                    android:id="@+id/loutDashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+        </com.rjn.thegamescompany.Custom.PVRecyclerScrollview>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

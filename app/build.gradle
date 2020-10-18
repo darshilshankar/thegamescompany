@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.rjn.thegamescompany"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 14
+        versionName "4.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [onesignal_app_id               : "01018bc0-aa20-43a3-a4fd-5c9769a637a6",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: "REMOTE"]
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+}
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.squareup.picasso:picasso:2.3.2'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'in.arjsna:swipecardlib:1.0.2'
+    implementation 'com.github.devlight:infinitecycleviewpager:1.0.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'uk.co.barbuzz:chompprogressview:0.0.2'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    //implementation 'io.realm:realm-android:0.82.1'
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+    implementation('com.alibaba.android:ultraviewpager:1.0.7.7@aar') {
+        transitive = true
+    }
+    // CUSTOM PROGRESSBAR
+    implementation 'com.akexorcist:RoundCornerProgressBar:2.0.3'
+    // PUSH NOTIFICATION
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation files('libs/nineoldandroids-2.4.0.jar')
+
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+    implementation 'com.google.firebase:firebase-core:16.0.7'
+
+    implementation 'com.onesignal:OneSignal:3.9.1'
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.9@aar') {
+        transitive = true;
+    }
+
+    implementation 'com.google.android.gms:play-services-ads:17.2.0'
+}
+
+apply plugin: 'realm-android'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'io.fabric'
